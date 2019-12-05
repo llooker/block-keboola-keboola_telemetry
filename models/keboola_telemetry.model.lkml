@@ -42,6 +42,7 @@ explore: kbc_configuration_job {
 }
 
 explore: kbc_project {
+  label: "KBC Project"
   join: kbc_organization {
     type: left_outer
     sql_on: ${kbc_project.kbc_organization_id} = ${kbc_organization.kbc_organization_id} ;;
@@ -50,6 +51,7 @@ explore: kbc_project {
 }
 
 explore: kbc_snowflake_stats {
+  label: "KBC Snowflake Stats"
   join: kbc_project {
     type: left_outer
     sql_on: ${kbc_snowflake_stats.kbc_project_id} = ${kbc_project.kbc_project_id} ;;
@@ -64,6 +66,7 @@ explore: kbc_snowflake_stats {
 }
 
 explore: kbc_usage_metrics_values {
+  label: "KBC Usage Metrics Values"
   join: usage_metric {
     type: left_outer
     sql_on: ${kbc_usage_metrics_values.usage_metric_id} = ${usage_metric.usage_metric_id} ;;

@@ -1,14 +1,15 @@
 view: kbc_organization {
-  sql_table_name: WORKSPACE_554682553.KBC_ORGANIZATION ;;
-  drill_fields: [kbc_organization_id]
+  sql_table_name: KBC_ORGANIZATION ;;
 
   dimension: kbc_organization_id {
+    label: "KBC Organization ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."KBC_ORGANIZATION_ID" ;;
   }
 
   dimension: kbc_organization {
+    label: "KBC Organization"
     type: string
     sql: ${TABLE}."KBC_ORGANIZATION" ;;
   }
@@ -29,6 +30,6 @@ view: kbc_organization {
 
   measure: count {
     type: count
-    drill_fields: [kbc_organization_id, kbc_project.count]
+    drill_fields: [kbc_organization, kbc_organization_id, kbc_project.count]
   }
 }

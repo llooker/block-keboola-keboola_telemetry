@@ -1,8 +1,8 @@
 view: usage_metric {
-  sql_table_name: WORKSPACE_554682553.USAGE_METRIC ;;
-  drill_fields: [usage_metric_id]
+  sql_table_name: USAGE_METRIC ;;
 
   dimension: usage_metric_id {
+    label: "Usage Metric ID"
     primary_key: yes
     type: string
     sql: ${TABLE}."USAGE_METRIC_ID" ;;
@@ -11,9 +11,11 @@ view: usage_metric {
   dimension: metric_group {
     type: string
     sql: ${TABLE}."METRIC_GROUP" ;;
+    order_by_field: metric_group_orderby
   }
 
   dimension: metric_group_orderby {
+    hidden: yes
     type: string
     sql: ${TABLE}."METRIC_GROUP_ORDERBY" ;;
   }
@@ -30,6 +32,6 @@ view: usage_metric {
 
   measure: count {
     type: count
-    drill_fields: [usage_metric_id, contract_limit_monthly.count, kbc_usage_metrics_values.count]
+    drill_fields: [usage_metric_id, contract_limit_monthly.count, usage_metric_values.count]
   }
 }
