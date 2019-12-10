@@ -1,4 +1,5 @@
 view: kbc_component_configuration {
+  label: "KBC Component Configuration"
   sql_table_name: KBC_COMPONENT_CONFIGURATION ;;
 
   dimension: kbc_component_configuration_id {

@@ -1,4 +1,5 @@
 view: kbc_project {
+  label: "KBC Project"
   sql_table_name: KBC_PROJECT ;;
 
   dimension: kbc_project_id {

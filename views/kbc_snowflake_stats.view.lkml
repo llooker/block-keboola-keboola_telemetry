@@ -1,4 +1,5 @@
 view: kbc_snowflake_stats {
+  label: "KBC Snowflake Stats"
   sql_table_name: KBC_SNOWFLAKE_STATS ;;
 
   dimension: kbc_snowflake_stats_id {

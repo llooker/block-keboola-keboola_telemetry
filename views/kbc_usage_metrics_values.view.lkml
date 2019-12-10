@@ -1,4 +1,5 @@
 view: kbc_usage_metrics_values {
+  label: "KBC Usage Metrics Value"
   sql_table_name: KBC_USAGE_METRICS_VALUES ;;
 
   set: org_project_breakdown {

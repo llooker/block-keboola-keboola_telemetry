@@ -1,4 +1,5 @@
 view: kbc_organization {
+  label: "KBC Organization"
   sql_table_name: KBC_ORGANIZATION ;;
 
   dimension: kbc_organization_id {

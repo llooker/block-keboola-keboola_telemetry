@@ -1,4 +1,5 @@
 view: kbc_configuration_job {
+  label: "KBC Configuration Job"
   sql_table_name: KBC_CONFIGURATION_JOB ;;
 
   set: project_component_config {
