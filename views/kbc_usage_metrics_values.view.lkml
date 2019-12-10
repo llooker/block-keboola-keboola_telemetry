@@ -89,7 +89,7 @@ view: kbc_usage_metrics_values {
          END;;
     required_fields: [usage_metric_id]
     value_format: "#,##0.00"
-    drill_fields: [org_project_breakdown*, monthly_value]
+    drill_fields: [org_project_breakdown*, monthly_value_project]
   }
 
   measure: count {
