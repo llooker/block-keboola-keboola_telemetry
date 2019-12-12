@@ -173,7 +173,8 @@ view: kbc_configuration_job {
     label: "Error Ratio %"
     type: number
     sql: ${error_jobs}/${count} ;;
-    value_format: "0%"
+    html: {{ rendered_value }} Error Ratio | {{ count._rendered_value }} Jobs;;
+    value_format: "0.00%"
     drill_fields: [kbc_project.kbc_project, job_start_month, count, error_jobs, error_ratio]
   }
 
@@ -196,5 +197,11 @@ view: kbc_configuration_job {
     description: "Defines how big portion of the SQL transformation job run on Large Datawarehouse."
     type: average
     sql: ${dwh_large_ratio_dimension} ;;
+  }
+
+  measure: tokens {
+    type: count_distinct
+    sql: ${token_name} ;;
+    drill_fields: [kbc_project.kbc_project, token_name, count]
   }
 }

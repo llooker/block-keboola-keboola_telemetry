@@ -94,8 +94,14 @@ view: kbc_component_configuration {
     sql: ${TABLE}."TOKEN_NAME" ;;
   }
 
-  measure: count {
+  measure: configurations {
     type: count
-    drill_fields: [kbc_project.kbc_project, kbc_component, count]
+    drill_fields: [kbc_project.kbc_project, kbc_component, kbc_component_configuration, kbc_component_configuration_id]
+  }
+
+  measure: components {
+    type: count_distinct
+    sql: ${kbc_component_id} ;;
+    drill_fields: [kbc_project.kbc_project, kbc_component, configurations]
   }
 }
