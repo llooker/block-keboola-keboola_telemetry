@@ -104,4 +104,9 @@ view: kbc_component_configuration {
     sql: ${kbc_component_id} ;;
     drill_fields: [kbc_project.kbc_project, kbc_component, configurations]
   }
+
+  measure: last_job_start {
+    type: date
+    sql: MAX(${kbc_configuration_job.job_start_raw}) ;;
+  }
 }
