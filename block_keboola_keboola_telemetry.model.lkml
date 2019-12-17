@@ -1,7 +1,7 @@
 connection: "keboola_block_keboola_telemetry"
 
 # include all the views
-include: "/views/**/*.view"
+include: "/*.view"
 
 datagroup: keboola_telemetry_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
