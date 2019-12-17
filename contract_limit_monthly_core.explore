@@ -1,5 +1,6 @@
 explore: contract_limit_monthly_core {
   hidden: yes
+  extension: required
 
   join: usage_metric {
     type: left_outer
