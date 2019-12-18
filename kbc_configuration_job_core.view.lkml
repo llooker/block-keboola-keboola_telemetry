@@ -1,6 +1,12 @@
+include: "//@{CONFIG_PROJECT_NAME}/kbc_configuration_job.view"
+
 view: kbc_configuration_job {
   label: "KBC Configuration Job"
-  sql_table_name: KBC_CONFIGURATION_JOB ;;
+  extends: [kbc_configuration_job_config]
+}
+
+view: kbc_configuration_job_core {
+  sql_table_name: @{SCHEMA_NAME}.KBC_CONFIGURATION_JOB ;;
 
   set: project_component_config {
     fields: [

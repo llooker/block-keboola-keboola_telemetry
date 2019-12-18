@@ -1,6 +1,12 @@
+include: "//@{CONFIG_PROJECT_NAME}/kbc_usage_metrics_values.view"
+
 view: kbc_usage_metrics_values {
   label: "KBC Usage Metrics Value"
-  sql_table_name: KBC_USAGE_METRICS_VALUES ;;
+  extends: [kbc_usage_metrics_values_config]
+}
+
+view: kbc_usage_metrics_values_core {
+  sql_table_name: @{SCHEMA_NAME}.KBC_USAGE_METRICS_VALUES ;;
 
   set: org_project_breakdown {
     fields: [

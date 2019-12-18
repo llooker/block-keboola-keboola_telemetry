@@ -1,5 +1,11 @@
+include: "//@{CONFIG_PROJECT_NAME}/usage_metric.view"
+
 view: usage_metric {
-  sql_table_name: USAGE_METRIC ;;
+  extends: [usage_metric_config]
+}
+
+view: usage_metric_core {
+  sql_table_name: @{SCHEMA_NAME}.USAGE_METRIC ;;
 
   dimension: usage_metric_id {
     label: "Usage Metric ID"

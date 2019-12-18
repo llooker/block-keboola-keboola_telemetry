@@ -1,6 +1,12 @@
+include: "//@{CONFIG_PROJECT_NAME}/kbc_snowflake_stats.view"
+
 view: kbc_snowflake_stats {
   label: "KBC Snowflake Stats"
-  sql_table_name: KBC_SNOWFLAKE_STATS ;;
+  extends: [kbc_snowflake_stats_config]
+}
+
+view: kbc_snowflake_stats_core {
+  sql_table_name: @{SCHEMA_NAME}.KBC_SNOWFLAKE_STATS ;;
 
   dimension: kbc_snowflake_stats_id {
     label: "KBC Snowflake Stats ID"

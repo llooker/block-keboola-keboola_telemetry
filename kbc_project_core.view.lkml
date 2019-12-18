@@ -1,6 +1,12 @@
+include: "//@{CONFIG_PROJECT_NAME}/kbc_project.view"
+
 view: kbc_project {
   label: "KBC Project"
-  sql_table_name: KBC_PROJECT ;;
+  extends: [kbc_project_config]
+}
+
+view: kbc_project_core {
+  sql_table_name: @{SCHEMA_NAME}.KBC_PROJECT ;;
 
   dimension: kbc_project_id {
     label: "KBC Project ID"
