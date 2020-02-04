@@ -1,0 +1,35 @@
+{
+  "label": "Data Ops Essentials",
+  "category_label": "Models",
+  "branding": {
+    "image_uri": "https://marketplace-api.looker.com/block-icons/KeboolaBrand.png",
+    "tagline": "Usage, job history, cost analysis and user activity dashboard for Keboola Connection customers."
+  },
+
+  "constants": {
+    "CONNECTION": {
+      "label": "Connection Name",
+      "value_constraint": "connection"
+    },
+    "SCHEMA_NAME": {
+      "label": "Schema Name"
+    },
+    "CONFIG_PROJECT_NAME": {
+      "label": "Config Project Name"
+    }
+  },
+  "models": [
+    {
+      "name": "block_keboola_git",
+      "connection_constant": "CONNECTION"
+    }
+  ],
+  "auxiliary_projects": [
+    {
+      "git_uri": "git://github.com/llooker/block-keboola_telemetry-config.git",
+      "git_ref": "4f2f31ba414849436824ef6264f40091644ad28f",
+      "label": "Data Ops Essentials by Keboola Config",
+      "constant_name": "CONFIG_PROJECT_NAME"
+    }
+  ]
+}
