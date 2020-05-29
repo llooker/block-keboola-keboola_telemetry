@@ -66,6 +66,11 @@ view: kbc_configuration_job_core {
     sql: ${TABLE}."DS_BACKEND_SIZE" ;;
   }
 
+  dimension: transformation_type {
+    type: string
+    sql: ${TABLE}."TRANSFORMATION_TYPE" ;;
+  }
+
   dimension: token_id {
     label: "Token ID"
     type: string
