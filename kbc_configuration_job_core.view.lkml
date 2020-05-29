@@ -131,7 +131,7 @@ view: kbc_configuration_job_core {
     type: sum
     sql: ${job_billed_credits_used_dimension} ;;
     value_format: "#,##0.00"
-    drill_fields: [project_component_config*, job_billed_credits_used]
+    drill_fields: [project_component_config*, job_billed_credits_used, count]
   }
 
   measure: job_time_credits_used {
@@ -139,7 +139,7 @@ view: kbc_configuration_job_core {
     type: sum
     sql: ${job_time_credits_used_dimension} ;;
     value_format: "#,##0.00"
-    drill_fields: [project_component_config*, job_time_credits_used]
+    drill_fields: [project_component_config*, job_time_credits_used, count]
   }
 
   measure: job_volume_credits_used {
@@ -147,14 +147,14 @@ view: kbc_configuration_job_core {
     type: sum
     sql: ${job_volume_credits_used_dimension} ;;
     value_format: "#,##0.00"
-    drill_fields: [project_component_config*, job_volume_credits_used]
+    drill_fields: [project_component_config*, job_volume_credits_used, count]
   }
 
   measure: job_run_time_sec {
     type: sum
     sql: ${job_run_time_sec_dimension} ;;
     value_format: "#,##0.00"
-    drill_fields: [project_component_config*, job_run_time_sec]
+    drill_fields: [project_component_config*, job_run_time_sec, count]
   }
 
   measure: count {
