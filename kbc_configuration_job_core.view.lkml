@@ -12,6 +12,7 @@ view: kbc_configuration_job_core {
     fields: [
       kbc_project.kbc_project,
       kbc_component_configuration.kbc_component,
+      transformation_type,
       kbc_component_configuration.configuration_id,
       job_run_type
     ]
