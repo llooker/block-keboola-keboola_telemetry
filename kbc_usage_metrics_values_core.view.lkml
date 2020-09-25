@@ -75,10 +75,10 @@ view: kbc_usage_metrics_values_core {
           WHEN ${usage_metric_id} IN ('kbc_ppu','kbc_elapsed_hours')
           THEN SUM(${value_dimension})
           WHEN ${usage_metric_id} IN ('kbc_projects','gd_projects','gd_users')
-          THEN CEIL(SUM(${value_dimension})/COUNT(DISTINCT ${TABLE}."DATE"))
+          THEN SUM(${value_dimension})/COUNT(DISTINCT ${TABLE}."DATE")
           WHEN ${usage_metric_id} IN ('kbc_users')
-          THEN CEIL(SUM(${organization_value_dimension})/COUNT(DISTINCT ${TABLE}."DATE"))
-          ELSE (SUM(${value_dimension})/COUNT(DISTINCT ${TABLE}."DATE"))
+          THEN SUM(${organization_value_dimension})/COUNT(DISTINCT ${TABLE}."DATE")
+          ELSE SUM(${value_dimension})/COUNT(DISTINCT ${TABLE}."DATE")
          END;;
     required_fields: [usage_metric_id]
     value_format: "#,##0.00"
@@ -91,8 +91,8 @@ view: kbc_usage_metrics_values_core {
           WHEN ${usage_metric_id} IN ('kbc_ppu','kbc_elapsed_hours')
           THEN SUM(${usage_metric_id})
           WHEN ${usage_metric_id} IN ('kbc_projects','gd_projects','kbc_users','gd_users')
-          THEN CEIL(SUM(${usage_metric_id})/COUNT(DISTINCT ${TABLE}."DATE"))
-          ELSE (SUM(${usage_metric_id})/COUNT(DISTINCT ${TABLE}."DATE"))
+          THEN SUM(${usage_metric_id})/COUNT(DISTINCT ${TABLE}."DATE")
+          ELSE SUM(${usage_metric_id})/COUNT(DISTINCT ${TABLE}."DATE")
          END;;
     required_fields: [usage_metric_id]
     value_format: "#,##0.00"

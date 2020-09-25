@@ -11,7 +11,7 @@ view: kbc_snowflake_stats_core {
   dimension: kbc_snowflake_stats_id {
     label: "KBC Snowflake Stats ID"
     type:  string
-    sql: md5(${TABLE}."DWH_SIZE"||'_'||${TABLE}."SNOWFLAKE_JOB_START_AT"||'_'||${TABLE}."KBC_PROJECT_ID"||'_'||${TABLE}."SNOWFLAKE_DB_NAME"||'_'||${TABLE}."SNOWFLAKE_JOB_RESULT"||'_'||${TABLE}."SNOWFLAKE_JOB_TYPE"||'_'||${TABLE}."SNOWFLAKE_SCHEMA_NAME"||'_'||${TABLE}."SNOWFLAKE_USER_NAME") ;;
+    sql: md5(concat(${TABLE}."DWH_SIZE", '_', ${TABLE}."SNOWFLAKE_JOB_START_AT", '_', ${TABLE}."KBC_PROJECT_ID", '_', ${TABLE}."SNOWFLAKE_DB_NAME", '_', ${TABLE}."SNOWFLAKE_JOB_RESULT", '_', ${TABLE}."SNOWFLAKE_JOB_TYPE", '_', ${TABLE}."SNOWFLAKE_SCHEMA_NAME", '_', ${TABLE}."SNOWFLAKE_USER_NAME")) ;;
     hidden: yes
     primary_key: yes
   }
