@@ -20,7 +20,7 @@
   },
   "models": [
     {
-      "name": "block_keboola_git",
+      "name": "block_keboola_keboola_telemetry",
       "connection_constant": "CONNECTION"
     }
   ],
