@@ -19,7 +19,7 @@ view: kbc_snowflake_stats_core {
   dimension: kbc_snowflake_stats_id {
     label: "KBC Snowflake Stats ID"
     type:  string
-    sql: md5(concat(${TABLE}."DWH_SIZE", '_', ${TABLE}."SNOWFLAKE_JOB_START_AT", '_', ${TABLE}."KBC_PROJECT_ID", '_', ${TABLE}."SNOWFLAKE_DATABASE", '_', ${TABLE}."SNOWFLAKE_JOB_RESULT", '_', ${TABLE}."SNOWFLAKE_JOB_TYPE", '_', ${TABLE}."SNOWFLAKE_SCHEMA", '_', ${TABLE}."SNOWFLAKE_USER")) ;;
+    sql: md5(concat(${TABLE}."DWH_SIZE", '_', ${TABLE}."SNOWFLAKE_DWH", '_', ${TABLE}."SNOWFLAKE_JOB_START_AT", '_', ${TABLE}."KBC_PROJECT_ID", '_', ${TABLE}."SNOWFLAKE_DATABASE", '_', ${TABLE}."SNOWFLAKE_JOB_RESULT", '_', ${TABLE}."SNOWFLAKE_JOB_TYPE", '_', ${TABLE}."SNOWFLAKE_SCHEMA", '_', ${TABLE}."SNOWFLAKE_USER")) ;;
     hidden: yes
     primary_key: yes
   }
@@ -40,6 +40,12 @@ view: kbc_snowflake_stats_core {
     label: "Snowflake Database"
     type: string
     sql: ${TABLE}."SNOWFLAKE_DATABASE" ;;
+  }
+
+  dimension: snowflake_dwh {
+    label: "Snowflake DWH"
+    type: string
+    sql: ${TABLE}."SNOWFLAKE_DWH" ;;
   }
 
   dimension: snowflake_job_result {
