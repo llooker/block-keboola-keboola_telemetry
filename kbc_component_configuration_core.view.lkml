@@ -23,12 +23,6 @@ view: kbc_component_configuration_core {
     sql: ${TABLE}."KBC_PROJECT_ID" ;;
   }
 
-  dimension: configuration_id {
-    label: "Configuration ID"
-    type: string
-    sql: ${TABLE}."CONFIGURATION_ID" ;;
-  }
-
   dimension: kbc_component_id {
     label: "KBC Component ID"
     type: string
