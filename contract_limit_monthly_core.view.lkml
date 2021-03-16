@@ -11,13 +11,7 @@ view: contract_limit_monthly_core {
     label: "Contract Limit Monthly ID"
     primary_key: yes
     type: string
-    sql: ${TABLE}."CONTRACT_USAGE_DATE_ID" ;;
-  }
-
-  dimension: company_id {
-    hidden: yes
-    type: string
-    sql: ${TABLE}."COMPANY_ID" ;;
+    sql: ${TABLE}."CONTRACT_LIMIT_MONTHLY_ID" ;;
   }
 
   dimension: usage_metric_id {
@@ -32,9 +26,9 @@ view: contract_limit_monthly_core {
     sql: ${TABLE}."CONTRACT_ID" ;;
   }
 
-  dimension: contract {
+  dimension: limit_type {
     type: string
-    sql: ${TABLE}."CONTRACT" ;;
+    sql: ${TABLE}."LIMIT_TYPE" ;;
   }
 
   dimension_group: date {

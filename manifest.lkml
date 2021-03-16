@@ -8,12 +8,12 @@ constant: CONFIG_PROJECT_NAME {
 }
 
 constant: CONNECTION {
-  value: "keboola_block_keboola_telemetry"
+  value: "keboola_block_keboola_telemetry_app"
   export: override_required
 }
 
 constant: SCHEMA_NAME {
-  value: "WORKSPACE_554682553"
+  value: "WORKSPACE_683361220"
   export: override_required
 }
 

@@ -31,8 +31,8 @@
       explore: contract_limit_monthly
       type: table
       fields: [contract_limit_monthly.date_month, contract_limit_monthly.limit_value,
-        usage_metric.metric_group, usage_metric.usage_metric]
-      sorts: [contract_limit_monthly.date_month 0, usage_metric.metric_group, usage_metric.usage_metric]
+        usage_metric.usage_metric]
+      sorts: [contract_limit_monthly.date_month 0, usage_metric.usage_metric]
       limit: 500
       query_timezone: America/Los_Angeles
     - model: block_keboola_keboola_telemetry
@@ -55,7 +55,6 @@
     hide_row_totals: false
     size_to_fit: true
     series_labels:
-      usage_metric.metric_group: Group
       usage_metric.usage_metric: Metric
       contract_limit_monthly.limit_value: Limit
       kbc_usage_metrics_values.monthly_value: Value

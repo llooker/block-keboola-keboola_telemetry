@@ -18,6 +18,8 @@ view: kbc_usage_metrics_values_core {
   }
 
   dimension: metrics_values_id {
+    label: "Metrics Values ID"
+    primary_key: yes
     type: string
     sql: ${TABLE}."METRICS_VALUES_ID" ;;
   }
@@ -74,7 +76,7 @@ view: kbc_usage_metrics_values_core {
     sql: CASE
           WHEN ${usage_metric_id} IN ('kbc_ppu','kbc_elapsed_hours')
           THEN SUM(${value_dimension})
-          WHEN ${usage_metric_id} IN ('kbc_projects','gd_projects','gd_users')
+          WHEN ${usage_metric_id} = 'kbc_projects'
           THEN SUM(${value_dimension})/COUNT(DISTINCT ${TABLE}."DATE")
           WHEN ${usage_metric_id} IN ('kbc_users')
           THEN SUM(${organization_value_dimension})/COUNT(DISTINCT ${TABLE}."DATE")
@@ -90,7 +92,7 @@ view: kbc_usage_metrics_values_core {
     sql: CASE
           WHEN ${usage_metric_id} IN ('kbc_ppu','kbc_elapsed_hours')
           THEN SUM(${usage_metric_id})
-          WHEN ${usage_metric_id} IN ('kbc_projects','gd_projects','kbc_users','gd_users')
+          WHEN ${usage_metric_id} IN ('kbc_projects','kbc_users')
           THEN SUM(${usage_metric_id})/COUNT(DISTINCT ${TABLE}."DATE")
           ELSE SUM(${usage_metric_id})/COUNT(DISTINCT ${TABLE}."DATE")
          END;;

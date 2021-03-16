@@ -54,7 +54,7 @@ explore: contract_limit_monthly {
 }
 
 explore: kbc_configuration_job {
-  label: "KBC Configuration Job"
+  label: "KBC Job"
   extends: [kbc_configuration_job_config]
 }
 

@@ -35,6 +35,12 @@ view: kbc_project_core {
     sql: ${TABLE}."KBC_PROJECT_URL" ;;
   }
 
+  dimension: kbc_project_creator {
+    label: "KBC Project Creator"
+    type: string
+    sql: ${TABLE}."KBC_PROJECT_CREATOR" ;;
+  }
+
   dimension_group: kbc_project_created {
     label: "KBC Project Created"
     type: time
@@ -63,6 +69,21 @@ view: kbc_project_core {
       year
     ]
     sql: ${TABLE}."KBC_PROJECT_DELETED_AT" ;;
+  }
+
+  dimension_group: kbc_project_expiration {
+    label: "KBC Project Expiration"
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}."KBC_PROJECT_EXPIRATION" ;;
   }
 
   dimension: kbc_project_is_deleted {

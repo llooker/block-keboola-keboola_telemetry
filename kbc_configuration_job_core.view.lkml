@@ -1,12 +1,12 @@
 include: "//@{CONFIG_PROJECT_NAME}/kbc_configuration_job.view"
 
 view: kbc_configuration_job {
-  label: "KBC Configuration Job"
+  label: "KBC Job"
   extends: [kbc_configuration_job_config]
 }
 
 view: kbc_configuration_job_core {
-  sql_table_name: @{SCHEMA_NAME}.KBC_CONFIGURATION_JOB ;;
+  sql_table_name: @{SCHEMA_NAME}.KBC_JOB ;;
 
   set: project_component_config {
     fields: [
@@ -19,10 +19,10 @@ view: kbc_configuration_job_core {
   }
 
   dimension: kbc_configuration_job_id {
-    label: "KBC Configuration Job ID"
+    label: "KBC Job ID"
     primary_key: yes
     type: string
-    sql: ${TABLE}."KBC_CONFIGURATION_JOB_ID" ;;
+    sql: ${TABLE}."KBC_JOB_ID" ;;
   }
 
   dimension: kbc_component_configuration_id {
@@ -53,12 +53,6 @@ view: kbc_configuration_job_core {
   dimension: job_run_type {
     type: string
     sql: ${TABLE}."JOB_RUN_TYPE" ;;
-  }
-
-  dimension: job_is_clone {
-    description: "Flags transformation job where at least one input mapping used clone load type."
-    type: yesno
-    sql: ${TABLE}."JOB_IS_CLONE" = '1' ;;
   }
 
   dimension: ds_backend_size {
@@ -96,12 +90,6 @@ view: kbc_configuration_job_core {
     sql: ${TABLE}."JOB_TIME_CREDITS_USED" ;;
   }
 
-  dimension: job_volume_credits_used_dimension {
-    hidden: yes
-    type: number
-    sql: ${TABLE}."JOB_VOLUME_CREDITS_USED" ;;
-  }
-
   dimension: job_run_time_sec_dimension {
     hidden: yes
     type: number
@@ -127,7 +115,7 @@ view: kbc_configuration_job_core {
   }
 
   measure: job_billed_credits_used {
-    description: "Number of credits consumed using type according to the contract (Time or Volume credits)."
+    description: "Number of consumed billed credits (credits consuming the contract limits)."
     type: sum
     sql: ${job_billed_credits_used_dimension} ;;
     value_format: "#,##0.00"
@@ -135,19 +123,11 @@ view: kbc_configuration_job_core {
   }
 
   measure: job_time_credits_used {
-    description: "Number of Time credits used (no matter what type of credits is being used for billing)."
+    description: "Number of time credits used (all time credits are not billed as well)."
     type: sum
     sql: ${job_time_credits_used_dimension} ;;
     value_format: "#,##0.00"
     drill_fields: [project_component_config*, job_time_credits_used, count]
-  }
-
-  measure: job_volume_credits_used {
-    description: "Number of Volume credits used (no matter what type of credits is being used for billing)."
-    type: sum
-    sql: ${job_volume_credits_used_dimension} ;;
-    value_format: "#,##0.00"
-    drill_fields: [project_component_config*, job_volume_credits_used, count]
   }
 
   measure: job_run_time_sec {
