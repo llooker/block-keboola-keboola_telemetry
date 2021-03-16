@@ -53,12 +53,6 @@ view: kbc_component_configuration_core {
     sql: ${TABLE}."KBC_COMPONENT_LISTING" ;;
   }
 
-  dimension: kbc_component_origin {
-    label: "KBC Component Origin"
-    type: string
-    sql: ${TABLE}."KBC_COMPONENT_ORIGIN" ;;
-  }
-
   dimension: kbc_component_type {
     label: "KBC Component Type"
     type: string
