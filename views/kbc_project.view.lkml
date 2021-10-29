@@ -1,11 +1,5 @@
-include: "//@{CONFIG_PROJECT_NAME}/kbc_project.view"
 
-view: kbc_project {
-  label: "KBC Project"
-  extends: [kbc_project_config]
-}
-
-view: kbc_project_core {
+view: kbc_project{
   sql_table_name: @{SCHEMA_NAME}.KBC_PROJECT ;;
 
   dimension: kbc_project_id {

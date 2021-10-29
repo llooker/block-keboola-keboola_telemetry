@@ -1,6 +1,6 @@
-explore: kbc_project_core {
-  hidden: yes
-  extension: required
+include: "/views/*.view.lkml"
+
+explore: kbc_project {
 
   join: kbc_organization {
     type: left_outer

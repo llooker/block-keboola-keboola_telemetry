@@ -1,11 +1,5 @@
-include: "//@{CONFIG_PROJECT_NAME}/kbc_organization.view"
 
 view: kbc_organization {
-  label: "KBC Organization"
-  extends: [kbc_organization_config]
-}
-
-view: kbc_organization_core {
   sql_table_name: @{SCHEMA_NAME}.KBC_ORGANIZATION ;;
 
   dimension: kbc_organization_id {

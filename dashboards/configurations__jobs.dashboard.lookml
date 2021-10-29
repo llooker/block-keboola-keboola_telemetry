@@ -29,7 +29,7 @@
     height: 2
   - title: Live Components
     name: Live Components
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: single_value
     fields: [kbc_component_configuration.components]
@@ -78,7 +78,7 @@
     height: 2
   - title: Live Configurations
     name: Live Configurations
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: single_value
     fields: [kbc_component_configuration.configurations]
@@ -128,7 +128,7 @@
     height: 2
   - title: Active Users
     name: Active Users
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: single_value
     fields: [kbc_configuration_job.tokens]
@@ -178,7 +178,7 @@
     height: 2
   - title: Live Orchestrations
     name: Live Orchestrations
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: single_value
     fields: [kbc_component_configuration.configurations]
@@ -228,7 +228,7 @@
     height: 2
   - title: Recent Error Ratio
     name: Recent Error Ratio
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: single_value
     fields: [kbc_configuration_job.error_ratio]
@@ -277,7 +277,7 @@
     height: 2
   - title: The 10 Most Used Configurations
     name: The 10 Most Used Configurations
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_bar
     fields: [kbc_component_configuration.kbc_component, kbc_configuration_job.count,
@@ -328,7 +328,7 @@
     height: 5
   - title: Successful/Error Jobs
     name: Successful/Error Jobs
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_area
     fields: [kbc_configuration_job.error_jobs, kbc_configuration_job.successfull_jobs,
@@ -387,7 +387,7 @@
     height: 5
   - title: Users With Highest Error Ratio
     name: Users With Highest Error Ratio
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_bar
     fields: [kbc_configuration_job.token_name, kbc_configuration_job.error_ratio]
@@ -454,7 +454,7 @@
     height: 5
   - title: The 10 Most Demanding Configurations
     name: The 10 Most Demanding Configurations
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_bar
     fields: [kbc_component_configuration.kbc_component, kbc_component_configuration.kbc_component_configuration_id,
@@ -508,7 +508,7 @@
     height: 5
   - title: The Most Active Users
     name: The Most Active Users
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_bar
     fields: [kbc_configuration_job.count, kbc_configuration_job.token_name, kbc_component_configuration.kbc_component_type]
@@ -577,7 +577,7 @@
     height: 5
   - title: Successful/Error Orchestrations
     name: Successful/Error Orchestrations
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_area
     fields: [kbc_configuration_job.error_jobs, kbc_configuration_job.successfull_jobs,
@@ -637,7 +637,7 @@
     height: 5
   - title: Unused Configurations
     name: Unused Configurations
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_grid
     fields: [kbc_component_configuration.kbc_component, kbc_component_configuration.kbc_component_configuration_id,
@@ -688,7 +688,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_project
     listens_to_filters: []
     field: kbc_project.kbc_project

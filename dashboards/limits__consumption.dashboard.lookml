@@ -27,7 +27,7 @@
   - name: Monthly Consumption
     title: Monthly Consumption
     merged_queries:
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: contract_limit_monthly
       type: table
       fields: [contract_limit_monthly.date_month, contract_limit_monthly.limit_value,
@@ -35,7 +35,7 @@
       sorts: [contract_limit_monthly.date_month 0, usage_metric.usage_metric]
       limit: 500
       query_timezone: America/Los_Angeles
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: kbc_usage_metrics_values
       type: table
       fields: [usage_metric.usage_metric, kbc_usage_metrics_values.date_month, kbc_usage_metrics_values.monthly_value]
@@ -105,7 +105,7 @@
     height: 6
   - title: Snowflake PPU
     name: Snowflake PPU
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_snowflake_stats
     type: single_value
     fields: [kbc_snowflake_stats.snowflake_queries_credits]
@@ -176,7 +176,7 @@
     height: 2
   - title: Jobs PPU
     name: Jobs PPU
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: single_value
     fields: [kbc_configuration_job.job_billed_credits_used]
@@ -248,7 +248,7 @@
     height: 2
   - title: Snowflake Credits by Job Type
     name: Snowflake Credits by Job Type
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_snowflake_stats
     type: looker_area
     fields: [kbc_snowflake_stats.snowflake_job_start_month, kbc_snowflake_stats.snowflake_queries_credits,
@@ -313,7 +313,7 @@
     height: 6
   - title: Jobs Credit Usage by Projects
     name: Jobs Credit Usage by Projects
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_area
     fields: [kbc_configuration_job.job_start_month, kbc_configuration_job.job_billed_credits_used,
@@ -367,7 +367,7 @@
     height: 8
   - title: Snowflake Credits by Project
     name: Snowflake Credits by Project
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_snowflake_stats
     type: looker_area
     fields: [kbc_snowflake_stats.snowflake_job_start_month, kbc_snowflake_stats.snowflake_queries_credits,
@@ -430,7 +430,7 @@
     height: 8
   - title: Jobs Credit Usage by Component Type
     name: Jobs Credit Usage by Component Type
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_configuration_job
     type: looker_area
     fields: [kbc_component_configuration.kbc_component_type, kbc_configuration_job.job_start_month,
@@ -497,7 +497,7 @@
   - name: Remaining PPU
     title: Remaining PPU
     merged_queries:
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: contract_limit_monthly
       type: table
       fields: [contract_limit_monthly.date_month, contract_limit_monthly.limit_value,
@@ -508,7 +508,7 @@
       sorts: [contract_limit_monthly.date_month 0, usage_metric.usage_metric]
       limit: 500
       query_timezone: America/Los_Angeles
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: kbc_usage_metrics_values
       type: table
       fields: [usage_metric.usage_metric, kbc_usage_metrics_values.date_month, kbc_usage_metrics_values.monthly_value]
@@ -574,7 +574,7 @@
   - name: Remaining TB
     title: Remaining TB
     merged_queries:
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: contract_limit_monthly
       type: table
       fields: [contract_limit_monthly.date_month, contract_limit_monthly.limit_value,
@@ -585,7 +585,7 @@
       sorts: [contract_limit_monthly.date_month 0, usage_metric.usage_metric]
       limit: 500
       query_timezone: America/Los_Angeles
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: kbc_usage_metrics_values
       type: table
       fields: [usage_metric.usage_metric, kbc_usage_metrics_values.date_month, kbc_usage_metrics_values.monthly_value]
@@ -651,7 +651,7 @@
   - name: Remaining Projects
     title: Remaining Projects
     merged_queries:
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: contract_limit_monthly
       type: table
       fields: [contract_limit_monthly.date_month, contract_limit_monthly.limit_value,
@@ -662,7 +662,7 @@
       sorts: [contract_limit_monthly.date_month 0, usage_metric.usage_metric]
       limit: 500
       query_timezone: America/Los_Angeles
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: kbc_usage_metrics_values
       type: table
       fields: [usage_metric.usage_metric, kbc_usage_metrics_values.date_month, kbc_usage_metrics_values.monthly_value]
@@ -729,7 +729,7 @@
   - name: Remaining Users
     title: Remaining Users
     merged_queries:
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: contract_limit_monthly
       type: table
       fields: [contract_limit_monthly.date_month, contract_limit_monthly.limit_value,
@@ -740,7 +740,7 @@
       sorts: [contract_limit_monthly.date_month 0, usage_metric.usage_metric]
       limit: 500
       query_timezone: America/Los_Angeles
-    - model: block_keboola_keboola_telemetry
+    - model: block_keboola_keboola_telemetry_v2
       explore: kbc_usage_metrics_values
       type: table
       fields: [usage_metric.usage_metric, kbc_usage_metrics_values.date_month, kbc_usage_metrics_values.monthly_value]
@@ -817,7 +817,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: block_keboola_keboola_telemetry
+    model: block_keboola_keboola_telemetry_v2
     explore: kbc_project
     listens_to_filters: []
     field: kbc_project.kbc_project

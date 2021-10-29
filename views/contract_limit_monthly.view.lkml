@@ -1,10 +1,7 @@
-include: "//@{CONFIG_PROJECT_NAME}/contract_limit_monthly.view"
+
+
 
 view: contract_limit_monthly {
-  extends: [contract_limit_monthly_config]
-}
-
-view: contract_limit_monthly_core {
   sql_table_name: @{SCHEMA_NAME}.CONTRACT_LIMIT_MONTHLY ;;
 
   dimension: contract_usage_date_id {

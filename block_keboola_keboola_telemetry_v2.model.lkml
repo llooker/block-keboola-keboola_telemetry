@@ -41,34 +41,6 @@
 
 connection: "@{CONNECTION}"
 
-include: "*.view"
-include: "*.explore.lkml"
-include: "*.dashboard.lookml"
-include: "//@{CONFIG_PROJECT_NAME}/*.view.lkml"
-include: "//@{CONFIG_PROJECT_NAME}/*.model.lkml"
-include: "//@{CONFIG_PROJECT_NAME}/*.dashboard.lkml"
-
-explore: contract_limit_monthly {
-  label: "Contracts & Limits"
-  extends: [contract_limit_monthly_config]
-}
-
-explore: kbc_configuration_job {
-  label: "KBC Job"
-  extends: [kbc_configuration_job_config]
-}
-
-explore: kbc_project {
-  label: "KBC Project"
-  extends: [kbc_project_config]
-}
-
-explore: kbc_snowflake_stats {
-  label: "KBC Snowflake Stats"
-  extends: [kbc_snowflake_stats_config]
-}
-
-explore: kbc_usage_metrics_values {
-  label: "KBC Usage Metrics Values"
-  extends: [kbc_usage_metrics_values_config]
-}
+include: "/views/*.view"
+include: "/explore/*.explore.lkml"
+include: "/dashboards/*.dashboard.lookml"

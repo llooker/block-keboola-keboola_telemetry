@@ -1,6 +1,7 @@
-explore: kbc_snowflake_stats_core {
-  hidden: yes
-  extension: required
+include: "/views/*.view.lkml"
+
+explore: kbc_snowflake_stats {
+
 
   join: kbc_project {
     type: left_outer

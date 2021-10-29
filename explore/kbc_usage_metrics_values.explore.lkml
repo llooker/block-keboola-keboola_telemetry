@@ -1,6 +1,7 @@
-explore: kbc_usage_metrics_values_core {
-  hidden: yes
-  extension: required
+include: "/views/*.view.lkml"
+
+explore: kbc_usage_metrics_values{
+
 
   join: usage_metric {
     type: left_outer

@@ -1,6 +1,5 @@
-explore: contract_limit_monthly_core {
-  hidden: yes
-  extension: required
+include: "/views/*.view.lkml"
+explore: contract_limit_monthly {
 
   join: usage_metric {
     type: left_outer

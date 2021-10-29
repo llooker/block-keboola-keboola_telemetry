@@ -1,6 +1,6 @@
-explore: kbc_configuration_job_core {
-  hidden: yes
-  extension: required
+include: "/views/*.view.lkml"
+
+explore: kbc_configuration_job {
 
   join: kbc_component_configuration {
     type: left_outer
