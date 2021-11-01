@@ -17,5 +17,6 @@ This block is built above data obtained from Keboola Connection Telemetry Data e
 
 You'll be provided with set of tables in one of your Keboola Connection projects. All you need to do is set up Database Writer and set it up based on our documentation and then set up the connection to the database in Looker and add it to the Looker model.
 
-
------
+## Customization
+The LookML contents of this block can also be modified/extended to best fit all use cases.
+This block utilizes Refinement files for customization. For more information on using refinements to customize marketplace blocks, please see [this documentation](https://docs.looker.com/data-modeling/marketplace/customize-blocks).

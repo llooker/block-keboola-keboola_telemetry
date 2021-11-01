@@ -41,6 +41,5 @@
 
 connection: "@{CONNECTION}"
 
-include: "/views/*.view"
-include: "/explore/*.explore.lkml"
+include: "/explores/*.explore.lkml"
 include: "/dashboards/*.dashboard.lookml"

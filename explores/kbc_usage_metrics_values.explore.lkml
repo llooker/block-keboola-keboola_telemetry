@@ -1,4 +1,7 @@
-include: "/views/*.view.lkml"
+include: "/views/kbc_usage_metrics_values.view.lkml"
+include: "/views/usage_metric.view.lkml"
+include: "/views/kbc_project.view.lkml"
+include: "/views/kbc_organization.view.lkml"
 
 explore: kbc_usage_metrics_values{
 

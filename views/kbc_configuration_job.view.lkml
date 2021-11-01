@@ -1,5 +1,3 @@
-
-
 view: kbc_configuration_job {
   sql_table_name: @{SCHEMA_NAME}.KBC_JOB ;;
 

@@ -1,4 +1,6 @@
-include: "/views/*.view.lkml"
+include: "/views/kbc_snowflake_stats.view.lkml"
+include: "/views/kbc_project.view.lkml"
+include: "/views/kbc_organization.view.lkml"
 
 explore: kbc_snowflake_stats {
 

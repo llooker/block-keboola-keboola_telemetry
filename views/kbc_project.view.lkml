@@ -1,4 +1,3 @@
-
 view: kbc_project{
   sql_table_name: @{SCHEMA_NAME}.KBC_PROJECT ;;
 

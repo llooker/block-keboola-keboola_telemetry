@@ -1,6 +1,3 @@
-
-
-
 view: contract_limit_monthly {
   sql_table_name: @{SCHEMA_NAME}.CONTRACT_LIMIT_MONTHLY ;;
 
