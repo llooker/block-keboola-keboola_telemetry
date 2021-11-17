@@ -1,4 +1,6 @@
-include: "/views/*.view.lkml"
+include: "/views/contract_limit_monthly.view"
+include: "/views/usage_metric.view"
+
 explore: contract_limit_monthly {
 
   join: usage_metric {

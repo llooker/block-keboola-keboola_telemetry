@@ -1,5 +1,3 @@
-
-
 view: kbc_component_configuration {
   label: "KBC Component Configuration"
   sql_table_name: @{SCHEMA_NAME}.KBC_COMPONENT_CONFIGURATION ;;
